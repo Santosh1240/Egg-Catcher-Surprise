@@ -31,7 +31,7 @@ def player(x, y):
 crackImg = pygame.image.load('yellow crack.png')
 crackImg1 = pygame.image.load('white crack.png')
 crackImg2 = pygame.image.load('black crack.png')
-
+#loading images
 eggImg = [
     pygame.image.load('yellow egg.png'),
     pygame.image.load('white egg.png'),
@@ -54,7 +54,7 @@ for i in range(number_of_eggs):
 def egg(x, y, i):
     screen.blit(eggImg[i], (x, y))
 
-
+#Check for collision
 def eggCollison():
     if egg_y[i] >= 450:
         return True
@@ -91,14 +91,14 @@ def game_over_text():
 # victory_font
 victory_font = pygame.font.Font('freesansbold.ttf', 45)
 
-
+#Check if game finished
 def game_over2():
     score_value = victory_font.render('GAME OVER', True, (255, 255, 255))
     screen.blit(score_value, (300, 230))
     text1 = reason_font.render('Time limit exceeded', True, (255, 0, 0))
     screen.blit(text1, (350, 280))
 
-
+#Check if won
 def victory():
     score_value = victory_font.render('YOU WON', True, (255, 255, 255))
     screen.blit(score_value, (300, 230))
@@ -199,7 +199,7 @@ while running:
             elif egg_y[3] >= 450:
                 screen.blit(crackImg2, (egg_x[3] - 10, 450))
 
-        # check when egg collide with basket
+        # check whether egg collides with basket
         egg_rect = pygame.Rect(egg_x[i], egg_y[i], 32, 50)
         rot_rect = pygame.Rect(egg_x[3], egg_y[3], 32, 52)
         basket_rect = pygame.Rect(playerx + 40, playery + 30, 80, 120)
