@@ -76,8 +76,6 @@ def showscore(x, y):
 
 
 # Game over text
-game_font = pygame.font.Font('freesansbold.ttf', 40)
-reason_font = pygame.font.Font('freesansbold.ttf', 20)
 
 
 # function to display game over text
@@ -89,7 +87,6 @@ def game_over_text():
 
 
 # victory_font
-victory_font = pygame.font.Font('freesansbold.ttf', 45)
 
 #Check if game finished
 def game_over2():
@@ -105,7 +102,7 @@ def victory():
 
 
 # pause text
-pause_font = pygame.font.Font('freesansbold.ttf', 40)
+
 
 
 def pause_text():
